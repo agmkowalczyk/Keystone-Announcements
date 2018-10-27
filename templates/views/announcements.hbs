@@ -1,0 +1,16 @@
+<div>
+<div class="container">
+  <h1>Ogłoszenia</h1> 
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-ms-9">
+      <div class="blog">
+        {{#each posts}}
+        <h2><a href="{{announcementUrl slug}}">{{{title}}}</a></h2>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
