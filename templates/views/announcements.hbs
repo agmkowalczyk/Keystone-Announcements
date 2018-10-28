@@ -8,7 +8,14 @@
       <div class="blog">
         {{#each posts}}
         <h2><a href="{{announcementUrl slug}}">{{{title}}}</a></h2>
-        {{/each}}
+			<p class="lead text-muted">{{{categoryList categories prefix="Opublikowano w "}}}
+				{{#if author.name.first}}dodane przez {{author.name.first}}{{/if}}
+			</p>
+			<p>{{{content.brief}}}</p>
+			{{#if content.extended}}<p class="read-more"><a href="{{announcementUrl slug}}">Czytaj dalej...</a></p>{{/if}}
+		{{else}}
+			<p>Nie znaleziono ogłoszeń.</p>
+		{{/each}}
       </div>
     </div>
   </div>

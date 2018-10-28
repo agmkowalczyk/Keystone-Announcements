@@ -13,7 +13,7 @@ var Announcement = new keystone.List('Announcement', {
 Announcement.add({
   title: { type: String, required: true, initial: true },
   author: { type: Types.Relationship, ref: 'User', index: true },
-	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
+  state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
   publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
   province: { type: Types.Select, options: 'mazowieckie, małopolskie, pomorskie'},
   tel: { type: String },
@@ -24,7 +24,7 @@ Announcement.add({
 	categories: { type: Types.Relationship, ref: 'Category' },
 });
 
-Announcement.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+Announcement.defaultColumns = 'title, state|20%, author|20%, categories|10%, publishedDate|20%';
 /**
  * Registration
  */

@@ -19,7 +19,7 @@ exports = module.exports = function (req, res) {
 			.populate('author categories');
 
 		q.exec(function (err, results) {
-			locals.posts = results;
+			locals.post = results;
 			next(err);
 		});
 	});

@@ -12,7 +12,7 @@ exports = module.exports = function (req, res) {
 	view.on('init', function (next) {
 
 		if (req.params.category) {
-			keystone.list('Category').model.findOne({ key: req.params.category }).exec(function (err, result) {
+			keystone.list('Category').model.findOne({ slug: req.params.category }).exec(function (err, result) {
 				locals.category = result;
 				next(err);
 			});
