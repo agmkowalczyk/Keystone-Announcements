@@ -1,0 +1,41 @@
+<div class="container">
+	<h1>Rejestracja</h1>
+	<br>
+	<form action="/rejestracja" method="POST">
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">E-mail*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="email" value="{{form.email}}" placeholder="Twój adres email" name="email">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Imię*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="text" value="{{form.firstname}}" placeholder="Twoje imię" name="firstname">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Nazwisko*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="text" value="{{form.lastname}}" placeholder="Twoje nazwisko" name="lastname">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Hasło*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="password" placeholder="Twoje hasło" name="password">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Powtórz hasło*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="password" placeholder="Powtórz hasło" name="passwordAgain">
+			</div>
+		</div>
+		<div class="form-group row text-right">
+			<div class="col-md-6">
+				<button class="btn btn-primary" type="submit">Zarejestruj się</button>
+			</div>
+		</div>
+	</form>
+</div>

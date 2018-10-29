@@ -296,21 +296,22 @@ module.exports = function () {
 		var output = '';
 		for (var i = 0; i < messages.length; i++) {
 
-			if (messages[i].title) {
-				output += '<h4>' + messages[i].title + '</h4>';
-			}
-
-			if (messages[i].detail) {
-				output += '<p>' + messages[i].detail + '</p>';
-			}
-
-			if (messages[i].list) {
-				output += '<ul>';
-				for (var ctr = 0; ctr < messages[i].list.length; ctr++) {
-					output += '<li>' + messages[i].list[ctr] + '</li>';
-				}
-				output += '</ul>';
-			}
+			output += `<p>${messages[i]}</p>`;
+			// if (messages[i].title) {
+			// 	output += '<h4>' + messages[i].title + '</h4>';
+			// }
+			//
+			// if (messages[i].detail) {
+			// 	output += '<p>' + messages[i].detail + '</p>';
+			// }
+			//
+			// if (messages[i].list) {
+			// 	output += '<ul>';
+			// 	for (var ctr = 0; ctr < messages[i].list.length; ctr++) {
+			// 		output += '<li>' + messages[i].list[ctr] + '</li>';
+			// 	}
+			// 	output += '</ul>';
+			// }
 		}
 		return new hbs.SafeString(output);
 	};
