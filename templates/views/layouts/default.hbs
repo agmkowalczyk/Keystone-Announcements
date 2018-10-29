@@ -42,9 +42,10 @@
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
+								<li><a href="/wyloguj">Wyloguj</a></li>
 								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
+								<li{{#ifeq section 'logowanie'}} class="active"{{/ifeq}}><a href="/logowanie">Logowanie</a></li>
+								<li{{#ifeq section 'rejestracja'}} class="active"{{/ifeq}}><a href="/rejestracja">Rejestracja</a></li>
 								{{/if}}
 							</ul>
 						</div>

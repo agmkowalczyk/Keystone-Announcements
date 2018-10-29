@@ -38,6 +38,7 @@ exports = module.exports = function (app) {
 	app.get('/ogloszenia/:category?', routes.views.announcements);
 	app.get('/ogloszenie/:slug', routes.views.announcement);
 	app.all('/rejestracja', routes.views.register);
+	app.all('/logowanie', routes.views.login);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
