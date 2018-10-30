@@ -42,7 +42,10 @@
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{{#if user}}
-								<li><a href="/wyloguj">Wyloguj</a></li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link dropdown-toggle"
+									   data-toggle="dropdown">Moje konto ({{user.name.first}})</a>
+									<div class="dropdown-menu"><a href="/wyloguj" class="dropdown-item">Wyloguj</a></div></li>
 								{{else}}
 								<li{{#ifeq section 'logowanie'}} class="active"{{/ifeq}}><a href="/logowanie">Logowanie</a></li>
 								<li{{#ifeq section 'rejestracja'}} class="active"{{/ifeq}}><a href="/rejestracja">Rejestracja</a></li>
