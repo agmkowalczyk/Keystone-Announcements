@@ -20,7 +20,8 @@ var _ = require('lodash');
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Ogloszenia', key: 'announcements', href: '/ogloszenia' },
+		{ label: 'Ogłoszenia', key: 'announcements', href: '/ogloszenia' },
+		{ label: 'Dodaj ogłoszenie', key: 'dodaj-ogloszenie', href: '/dodaj-ogloszenie' },
 	];
 	res.locals.user = req.user;
 	next();
@@ -47,8 +48,8 @@ exports.flashMessages = function (req, res, next) {
  */
 exports.requireUser = function (req, res, next) {
 	if (!req.user) {
-		req.flash('error', 'Please sign in to access this page.');
-		res.redirect('/keystone/signin');
+		req.flash('error', 'Musisz być zalogowany');
+		res.redirect('/logowanie');
 	} else {
 		next();
 	}

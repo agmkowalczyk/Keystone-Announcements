@@ -1,0 +1,57 @@
+<div class="container">
+	<h1>Dodaj ogłoszenie</h1>
+	<br>
+	<form action="/dodaj-ogloszenie" method="POST">
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Tytuł*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="text" value="{{form.title}}" placeholder="Tytuł ogłoszenia" name="title">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Województwo*</label>
+			<div class="col-md-4">
+				<select class="custom-select" name="province">
+					<option value="mazowieckie">Mazowieckie</option>
+					<option value="pomorskie">Pomorskie</option>
+					<option value="małopolskie">Małopolskie</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Telefon*</label>
+			<div class="col-md-4">
+				<input class="form-control" type="tel" value="{{form.tel}}" placeholder="Numer telefonu" name="tel">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Krótki opis*</label>
+			<div class="col-md-4">
+				<textarea class="form-control" value="{{form.content_brief}}"
+						  placeholder="Krótki opis" name="content_brief" rows="10"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Długi opis*</label>
+			<div class="col-md-4">
+				<textarea class="form-control" value="{{form.content_extended}}"
+						  placeholder="Długi opis" name="content_extended" rows="10"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Kategoria*</label>
+			<div class="col-md-4">
+				<select class="custom-select" name="category">
+					{{#each categories}}
+						<option value="{{_id}}">{{name}}</option>
+					{{/each}}
+				</select>
+			</div>
+		</div>
+		<div class="form-group row text-right">
+			<div class="col-md-6">
+				<button class="btn btn-primary" type="submit">Dodaj ogłoszenie</button>
+			</div>
+		</div>
+	</form>
+</div>
